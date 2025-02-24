@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "917075874864",
+    "firebase_url": "https://trackmybills-941d7-default-rtdb.firebaseio.com",
+    "project_id": "trackmybills-941d7",
+    "storage_bucket": "trackmybills-941d7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917075874864:android:0a281bd0e2c8c337d089f5",
+        "android_client_info": {
+          "package_name": "com.wpjp.xpensly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "917075874864-1tsgfp9eiiqgpq85g6nsnt7rsmf3kpm4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wpjp.xpensly",
+            "certificate_hash": "485a5f2a5119df3ad6e9e10edfbc52ef92777f20"
+          }
+        },
+        {
+          "client_id": "917075874864-c7nb8dike9e67vheeukv25eidrasnvpt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wpjp.xpensly",
+            "certificate_hash": "5314fc80055d42aa24a58dac8b0d28e9a4e1ad32"
+          }
+        },
+        {
+          "client_id": "917075874864-bonnnor7ou2gcf4mp06forsop651ofpb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtYy7qJU1l-UgnbsriytudnIQYibgoksw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "917075874864-bonnnor7ou2gcf4mp06forsop651ofpb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "917075874864-bm4pn9ghlosvk0les0rkeacjd492mvte.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.wpjp.xpensly"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
