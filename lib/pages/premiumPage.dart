@@ -32,14 +32,14 @@ StreamSubscription<List<PurchaseDetails>>? purchaseListener;
 Map<String, ProductDetails> storeProducts = {};
 Map<String, String> productIDs = {
   'yearly': getPlatform(ignoreEmulation: true) == PlatformOS.isIOS
-      ? 'Xpense.pro.yearly' //iOS
-      : 'Xpense.pro.yearly', //Android
+      ? 'Xpensly.pro.yearly' //iOS
+      : 'Xpensly.pro.yearly', //Android
   'monthly': getPlatform(ignoreEmulation: true) == PlatformOS.isIOS
-      ? 'Xpense.pro.monthly' //iOS
-      : 'Xpense.pro.monthly', //Android
+      ? 'Xpensly.pro.monthly' //iOS
+      : 'Xpensly.pro.monthly', //Android
   'lifetime': getPlatform(ignoreEmulation: true) == PlatformOS.isIOS
-      ? 'Xpense.pro.life' //iOS
-      : 'Xpense.pro.lifetime', //Android
+      ? 'Xpensly.pro.life' //iOS
+      : 'Xpensly.pro.lifetime', //Android
 };
 
 // A user has paid is appStateSettings["purchaseID"] is not null
@@ -1423,7 +1423,7 @@ class PremiumBanner extends StatelessWidget {
             borderRadius: borderRadius,
             onTap: () {
               if (kIsWeb)
-                openUrl("https://ko-fi.com/dapperappdeveloper");
+                openUrl("https://adamapps.in");
               else
                 openContainer();
             },

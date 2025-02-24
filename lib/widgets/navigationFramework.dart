@@ -509,7 +509,7 @@ class PageNavigationFrameworkState extends State<PageNavigationFramework> {
         alignment: AlignmentDirectional.bottomEnd,
         child: Padding(
           padding: EdgeInsetsDirectional.only(
-            bottom: getHeightNavigationSidebar(context) + 15,
+            bottom: (getHeightNavigationSidebar(context) + 30), // Doubled
             end: 15,
           ),
           child: AnimateFAB(

@@ -309,22 +309,21 @@ class _BudgetPageContentState extends State<_BudgetPageContent> {
             }
           },
         ),
-        subtitleAlignment: AlignmentDirectional.bottomStart,
-        subtitleSize: 10,
-        backgroundColor: pageBackgroundColor,
-        listID: pageId,
-        floatingActionButton: AnimateFABDelayed(
-          fab: AddFAB(
-            tooltip: "add-transaction".tr(),
-            openPage: AddTransactionPage(
-              selectedBudget: widget.budget.sharedKey != null ||
-                      widget.budget.addedTransactionsOnly == true
-                  ? widget.budget
-                  : null,
-              routesToPopAfterDelete: RoutesToPopAfterDelete.One,
+        floatingActionButton: Padding(
+          padding: const EdgeInsets.only(bottom: 120), // Adjust this value as needed
+          child: AnimateFABDelayed(
+            fab: AddFAB(
+              tooltip: "add-transaction".tr(),
+              openPage: AddTransactionPage(
+                selectedBudget: widget.budget.sharedKey != null ||
+                    widget.budget.addedTransactionsOnly == true
+                    ? widget.budget
+                    : null,
+                routesToPopAfterDelete: RoutesToPopAfterDelete.One,
+              ),
+              color: Theme.of(context).colorScheme.secondary,
+              colorIcon: Theme.of(context).colorScheme.onSecondary,
             ),
-            color: Theme.of(context).colorScheme.secondary,
-            colorIcon: Theme.of(context).colorScheme.onSecondary,
           ),
         ),
         actions: [

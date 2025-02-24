@@ -346,9 +346,24 @@ class AboutLinks extends StatelessWidget {
             _buildTappable(
               context: context,
               isExternalLink: true,
-              onTap: () => openUrl("https://xpensly.adamapps.in/policy.html"),
+              onTap: () => openUrl("https://github.com/njamal816/Xpense"),
               icon: MoreIcons.chart_pie,
               text: "app-is-open-source".tr(namedArgs: {"app": globalAppName}),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 4.0),
+              child: GestureDetector(
+                onTap: () => openUrl("https://github.com/jameskokoska/Cashew"),
+                child: Text(
+                  "This app is based on Cashew, an open-source project.",
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: Colors.blue,
+                    decoration: TextDecoration.underline,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
             ),
             const HorizontalBreak(padding: EdgeInsetsDirectional.zero),
             _buildTappable(
