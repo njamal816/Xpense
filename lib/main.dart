@@ -87,6 +87,7 @@ class InitializeApp extends StatefulWidget {
 class _InitializeAppState extends State<InitializeApp> {
   AppOpenAd? _appOpenAd;
   bool _isAdAvailable = false;
+  bool _hasOnboarded = false;
 
   void refreshAppState() {
     setState(() {});
@@ -95,12 +96,22 @@ class _InitializeAppState extends State<InitializeApp> {
   @override
   void initState() {
     super.initState();
-    loadAppOpenAd();
+    checkOnboardingStatus(); // This will handle ad loading
+  }
+
+  Future<void> checkOnboardingStatus() async {
+    _hasOnboarded = appStateSettings["hasOnboarded"];
+
+    print("Has Onboarded: $_hasOnboarded"); // Debugging output
+
+    if (_hasOnboarded) {
+      loadAppOpenAd(); // Only load ads if onboarding is completed
+    }
   }
 
   void loadAppOpenAd() {
     AppOpenAd.load(
-      adUnitId: 'ca-app-pub-2035149885634118/6175604106', // Test ID, replace with real ID
+      adUnitId: 'ca-app-pub-2035149885634118/6175604106',
       request: AdRequest(),
       adLoadCallback: AppOpenAdLoadCallback(
         onAdLoaded: (ad) {
@@ -116,11 +127,11 @@ class _InitializeAppState extends State<InitializeApp> {
   }
 
   void showAdIfAvailable() {
-    if (_isAdAvailable && _appOpenAd != null) {
+    if (_isAdAvailable && _appOpenAd != null && _hasOnboarded) {
       _appOpenAd!.fullScreenContentCallback = FullScreenContentCallback(
         onAdDismissedFullScreenContent: (ad) {
           ad.dispose();
-          loadAppOpenAd(); // Preload next ad
+          loadAppOpenAd();
         },
         onAdFailedToShowFullScreenContent: (ad, error) {
           ad.dispose();
